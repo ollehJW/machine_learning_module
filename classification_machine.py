@@ -62,7 +62,7 @@ svm_model_scoring = Classification_Score(svm_model, y_test, y_pred)
 svm_model_scoring.print_score()
 svm_model_scoring.confusion_matrix(X_test)
 # svm_model_scoring.plot_roc_curve(svm_model.predict_proba(X_test, probability=)[:,1])
-# %% Randomforest
+# %% RandomForest
 rf_model = Models.RandomForest()
 y_pred = rf_model.predict(X_test)
 rf_model_scoring = Classification_Score(rf_model, y_test, y_pred)
@@ -78,7 +78,7 @@ gnb_model_scoring.confusion_matrix(X_test)
 gnb_model_scoring.plot_roc_curve(gnb_model.predict_proba(X_test)[:,1])
 # %% XGBoost
 xgb_model = Models.XGBoost()
-y_pred = rf_model.predict(X_test)
+y_pred = xgb_model.predict(X_test)
 xgb_model_scoring = Classification_Score(xgb_model, y_test, y_pred)
 xgb_model_scoring.print_score()
 xgb_model_scoring.confusion_matrix(X_test)
